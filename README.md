@@ -1,5 +1,3 @@
-# Customer-Behavior-Analytics-PowerBI
-End-to-end Data Analytics project using Python, MySQL, and Power BI.
 # 🛒 End-to-End Customer Behavior Analytics Dashboard
 
 An end-to-end data analytics project built to analyze customer shopping behavior, revenue distribution, purchasing patterns, and sales performance across demographics and regions.
@@ -8,7 +6,7 @@ An end-to-end data analytics project built to analyze customer shopping behavior
 
 ## 📊 Business Key Performance Indicators (KPIs)
 
-- **Total Customers:** 3.9K / 2.85K (Filtered)
+- **Total Customers:** 3.9K (Total Dataset) | 207 (Filtered Segment)
 - **Average Purchase Amount:** ~$59.87
 - **Average Review Rating:** 3.75 / 5.0
 - **Subscription Rate:** 27% Subscribed | 73% Non-Subscribed
@@ -24,7 +22,16 @@ An end-to-end data analytics project built to analyze customer shopping behavior
    - Executed analytical SQL queries to answer critical business questions.
 3. **Power BI Desktop:**
    - Connected via `MySQL Connector/NET`.
-   - Data modeling, DAX measures, and custom interactive visualization layout.
+   - Data modeling, custom DAX measures, and interactive visualization layout.
+
+---
+
+## 📐 Data Model & DAX Measures
+
+- **Total Customers:** `Total Customers = DISTINCTCOUNT(customer_shopping_behavior[Customer ID])`
+- **Average Purchase Amount:** `Avg Purchase = AVERAGE(customer_shopping_behavior[Purchase Amount (USD)])`
+- **Average Review Rating:** `Avg Rating = AVERAGE(customer_shopping_behavior[Review Rating])`
+- **Age Group Column:** Binned age segments (`Young Adult`, `Adult`, `Middle-aged`, `Senior`).
 
 ---
 
@@ -34,17 +41,21 @@ An end-to-end data analytics project built to analyze customer shopping behavior
 2. **Sales by Age Group:** Evaluates purchase concentration across demographic age segments.
 3. **Revenue by Location:** Highlights top revenue-generating geographic regions.
 4. **Customers by Payment Method:** Treemap visualization showing preference across Credit Card, PayPal, Venmo, Cash, and Bank Transfer.
-5. **Interactive Filters:** Global slicing by Gender, Shipping Type, and Subscription Status.
+5. **Interactive Filters:** Global slicing by Gender and Shipping Type.
+
+---
+
+## 🔗 Live Interactive Dashboard File
+
+- 💾 **Download `.pbix` File:** [Click Here to View/Download Dashboard File](https://drive.google.com/file/d/13u41fyax50DDPuqgCxfxh4zF0ztPgF2j/view?usp=drive_link)
 
 ---
 
 ## 📁 Repository Structure
+
+```text
 ├── customer_shopping_behavior.csv    # Raw dataset
-
-├── python_mysql_script.py            # MySQL script
-
+├── python_mysql_script.py            # MySQL database script
 ├── Customer_Behavior_Dashboard.pbix  # Power BI dashboard file
-
 ├── dashboard_screenshot.png          # Visual preview
-
 └── README.md                         # Project documentation
