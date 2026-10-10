@@ -21,7 +21,7 @@ An end-to-end data analytics project built to analyze customer shopping behavior
    - Relational database storage (`customer_shopping_behavior` table).
    - Executed analytical SQL queries to answer critical business questions.
 3. **Power BI Desktop:**
-   - Connected via `MySQL Connector/NET`.
+   - Connected via `MySQL Connector`.
    - Data modeling, custom DAX measures, and interactive visualization layout.
 
 ---
